@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
@@ -40,7 +41,12 @@ public class Movement : MonoBehaviour
     private void ProcessRotation()
     {
         float rotationInput = rotation.ReadValue<float>();
-        Debug.Log("Rotation Input value: " + rotationInput);
-        transform.Rotate(-Vector3.forward * rotationStrength * rotationInput * Time.fixedDeltaTime);
+        // Debug.Log("Rotation Input value: " + rotationInput);
+        if(rotationInput != 0)
+        {
+            rb.freezeRotation = true;
+            transform.Rotate(-Vector3.forward * rotationStrength * rotationInput * Time.fixedDeltaTime);
+            rb.freezeRotation = false;
+        }
     }
 }
