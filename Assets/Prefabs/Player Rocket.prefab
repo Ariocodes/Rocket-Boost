@@ -261,7 +261,7 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
     m_Priority: 0
-  rotationForce: 100
+  rotationForce: 190
   thrustForce: 3000
   mainEngine: {fileID: 8300000, guid: 7b2e25b4d16b2ed498e8d75b267879d0, type: 3}
   mainEngineParticles: {fileID: 9008439273893187762}
