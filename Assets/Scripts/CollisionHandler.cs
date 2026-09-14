@@ -4,10 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [Header("Delays")]
     [SerializeField] float reloadDelay = 2f;
     [SerializeField] float nextLevelDelay = 2f;
+    [Header("Audio Clips")]
     [SerializeField] AudioClip finishSFX;
     [SerializeField] AudioClip crashSFX;
+    [Header("Particles")]
+    [SerializeField] ParticleSystem crashParticles;
+    [SerializeField] ParticleSystem successParticles;
 
     AudioSource audioSource;
 
@@ -44,22 +49,26 @@ public class CollisionHandler : MonoBehaviour
 
     private void StartFinishSequence()
     {
-        // TODO: add sfx and particles
         isControllable = false;
         audioSource.Stop();
         GetComponent<Movement>().enabled = false; // turning off movement when finished
+
+        successParticles.Play();
         audioSource.PlayOneShot(finishSFX);
+
         Invoke("LoadNextLevel", nextLevelDelay); // 2 second delay
         // any code after Invoke (in the same method) works just fine.
     }
 
     void StartCrashSequence()
     {
-        // TODO: add sfx and particles
         isControllable = false;
         audioSource.Stop();
         GetComponent<Movement>().enabled = false; // turning off movement when crashed
+
+        crashParticles.Play();
         audioSource.PlayOneShot(crashSFX);
+
         Invoke("ReloadLevel", reloadDelay); // 2 second delay
         // any code after Invoke (in the same method) works just fine.
     }

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 20cf13a2006ad5d4db178be5bf699d8a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -1.4251232e-24, y: 0.00000003071953, z: 4.3779115e-32, w: 1}
-  m_LocalPosition: {x: -10.069998, y: 2.6599982, z: -13}
+  m_LocalPosition: {x: -10.069998, y: 2.6399982, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -644,7 +644,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 936d0d9f05e714d4ebb8b8b734f881ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -766,7 +766,7 @@ Transform:
   m_GameObject: {fileID: 1999165821}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.00000003071953, z: 4.639144e-17, w: 1}
-  m_LocalPosition: {x: -10.069998, y: 2.6599982, z: -13}
+  m_LocalPosition: {x: -10.069998, y: 2.6399982, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -935,7 +935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2081507994920342296, guid: c7b7c73eac7271c4c8281230e1730c87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.27
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 2081507994920342296, guid: c7b7c73eac7271c4c8281230e1730c87, type: 3}
       propertyPath: m_LocalPosition.z
