@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
@@ -13,24 +14,42 @@ public class CollisionHandler : MonoBehaviour
     [Header("Particles")]
     [SerializeField] ParticleSystem crashParticles;
     [SerializeField] ParticleSystem successParticles;
-
+    // [Space]
+    // [SerializeField] InputAction debugButton;
     AudioSource audioSource;
 
-    bool isControllable = true;
+    public bool isControllable = true;
+    bool isCollidable = true;
 
+    ParticleSystem mainEngineParticles;
 
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        mainEngineParticles = GetComponent<Movement>().mainEngineParticles;
     }
 
+    void Update()
+    {
+        RespondToDebugKeys();
+    }
 
+    private void RespondToDebugKeys()
+    {
+        if (Keyboard.current.lKey.wasPressedThisFrame)
+        {
+            LoadNextLevel();
+        }
+        else if (Keyboard.current.cKey.wasPressedThisFrame)
+        {
+            isCollidable = !isCollidable;
+        }
+    }
 
     void OnCollisionEnter(Collision collision)
     {
-
-        if (!isControllable) { return; }
+        if (!isControllable || !isCollidable) { return; }
 
         switch (collision.gameObject.tag)
         {
@@ -64,6 +83,7 @@ public class CollisionHandler : MonoBehaviour
     {
         isControllable = false;
         audioSource.Stop();
+        mainEngineParticles.Stop();
         GetComponent<Movement>().enabled = false; // turning off movement when crashed
 
         crashParticles.Play();

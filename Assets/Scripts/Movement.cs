@@ -12,13 +12,12 @@ public class Movement : MonoBehaviour
     [Header("Audio Clips")]
     [SerializeField] AudioClip mainEngine;
     [Header("Engine Particles")]
-    [SerializeField] ParticleSystem mainEngineParticles;
+    [SerializeField] public ParticleSystem mainEngineParticles; // Used by CollisionHandler.cs also
     [SerializeField] ParticleSystem leftSideEngineParticles;
     [SerializeField] ParticleSystem rightSideEngineParticles;
 
     Rigidbody rb;
     AudioSource audioSource;
-    
 
     void Start()
     {
