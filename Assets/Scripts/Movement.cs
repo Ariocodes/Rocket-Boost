@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] InputAction rotation;
     [Header("Forces")]
     [SerializeField] float rotationForce = 100f;
-    [SerializeField] float thrustForce = 1000f;
+    [SerializeField] float thrustForce = 3000f;
     [Header("Audio Clips")]
     [SerializeField] AudioClip mainEngine;
     [Header("Engine Particles")]
@@ -104,6 +104,7 @@ public class Movement : MonoBehaviour
         rb.freezeRotation = true;
         transform.Rotate(-Vector3.forward * rotationForce * rotationInput * Time.fixedDeltaTime);
         rb.freezeRotation = false;
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ;
     }
 
     private void StopRotation()

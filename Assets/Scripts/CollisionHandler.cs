@@ -40,10 +40,12 @@ public class CollisionHandler : MonoBehaviour
         if (Keyboard.current.lKey.wasPressedThisFrame)
         {
             LoadNextLevel();
+            Debug.Log("Moving onto the next Level");
         }
         else if (Keyboard.current.cKey.wasPressedThisFrame)
         {
             isCollidable = !isCollidable;
+            Debug.Log("Collision is now: " + isCollidable);
         }
     }
 

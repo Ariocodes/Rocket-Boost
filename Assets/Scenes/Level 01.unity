@@ -2666,38 +2666,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6140255774127599406, guid: c7b7c73eac7271c4c8281230e1730c87, type: 3}
-      propertyPath: debugButton.m_Name
-      value: Debug Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140255774127599406, guid: c7b7c73eac7271c4c8281230e1730c87, type: 3}
-      propertyPath: debugButton.m_SingletonActionBindings.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140255774127599406, guid: c7b7c73eac7271c4c8281230e1730c87, type: 3}
-      propertyPath: debugButton.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 56185550-ec4b-4d2e-9ce1-b7e6b0f5a6d4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140255774127599406, guid: c7b7c73eac7271c4c8281230e1730c87, type: 3}
-      propertyPath: debugButton.m_SingletonActionBindings.Array.data[1].m_Id
-      value: ccd3b865-35fe-4f32-b18b-e0e0a8f6dfd8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140255774127599406, guid: c7b7c73eac7271c4c8281230e1730c87, type: 3}
-      propertyPath: debugButton.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/l
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140255774127599406, guid: c7b7c73eac7271c4c8281230e1730c87, type: 3}
-      propertyPath: debugButton.m_SingletonActionBindings.Array.data[1].m_Path
-      value: <Gamepad>/buttonWest
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140255774127599406, guid: c7b7c73eac7271c4c8281230e1730c87, type: 3}
-      propertyPath: debugButton.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Debug Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140255774127599406, guid: c7b7c73eac7271c4c8281230e1730c87, type: 3}
-      propertyPath: debugButton.m_SingletonActionBindings.Array.data[1].m_Action
-      value: Debug Button
-      objectReference: {fileID: 0}
     - target: {fileID: 6847146631657029580, guid: c7b7c73eac7271c4c8281230e1730c87, type: 3}
       propertyPath: m_Name
       value: Player Rocket
